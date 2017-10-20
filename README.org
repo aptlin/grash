@@ -1,0 +1,49 @@
+* Grash
+* File and Directory Types
+
+- *Modular*
+
+  Template modules are templates which are not stand-alone, but which are
+  used in rendering other templates.
+
+  A file is considered a template module if its name or names of
+  any of its parent directories are prefixed with '_'.
+
+- *Private*
+
+  Private files are neither rendered nor used as template modules.
+
+  A file is considered private if its name or names of any of
+  its parent directories are prefixed with '.'.
+
+- *Static*
+
+  Static files are not processed by Jinja2 and just copied to the
+  corresponding directory instead.
+
+- *Pandoc*
+
+  Files to be processed with Pandoc.
+
+* Features to Implement
+ - Documentation
+    + Systematise the documentation
+ - Easy configuration
+    + Make the process of customisation easier by providing a boilerplate configuration file
+ - Clearing
+    + either save a log of automatically generated templates to be cleared on
+      the next run, or compartmentalise the user templates from the
+      automatically generated templates
+ - Watcher
+    + watch for changes in static and pandoc-processed directories
+ - Global parameters
+    + Add the option of supplying global parameters to jinja2
+ - Custom filters
+    + Add the option of supplying custom filters to jinja2
+* Jinja Templating
+
+- http://jinja.pocoo.org/docs/2.9/api/
+
+* Acknowledgements
+
+The code has been largely inspired by Ceasar's [[https://github.com/Ceasar/staticjinja][stasticjinja]].
